@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>邀请有礼</title>
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="css/invite.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<script src="js/setfont.js"></script>
+</head>
+<body>
+<div id="fullpage">
+
+    <div class="section">
+        <div class="coupon-wrap">
+            <img src="images/coupon_compress.png" alt="">
+            <div class="inner">
+                <div class="coupon-money">
+                    <b>2</b>元
+                </div>
+                <input id="foo" class="code" type="text" value="AD343ZHQ">
+                <button class="btncopy"  data-clipboard-target="#foo">复制</button>
+            </div>
+        </div>
+        <div class="dl-wrap">
+            <a href="" class="btn-download">下载1步单车</a>
+            <div class="tips">新用户是指未注册或未参加过 1 步单车活动的用户</div>
+            <div class="arrow-box">
+                <img id="array" src="images/arrow.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section1">
+        <div class="block clearfix wow zoomIn" style="margin-top:0.6rem;">
+            <img src="images/pic1.png" alt="" class="album">
+            <div class="text">
+                <img src="images/01_des.png" alt="方便快捷">
+            </div>
+        </div>
+        <div class="block rightstyle clearfix wow zoomIn">
+            <img src="images/pic2.png" alt="" class="album">
+            <div class="text">
+                <img src="images/02_des.png" alt="低碳出行 绿色环保">
+            </div>
+        </div>
+        <div class="block clearfix">
+            <img src="images/pic3.png" alt="" class="album">
+            <div class="text">
+                <img src="images/03_des.png" alt="风尚骑行 健康运动">
+            </div>
+        </div>
+        <div class="block rightstyle clearfix">
+            <img src="images/pic4.png" alt="" class="album">
+            <div class="text">
+                <img src="images/04_des.png" alt="用1步 不开车">
+            </div>
+        </div>
+        <div class="blank"></div>
+    </div>
+
+</div>
+
+<div class="btm-wrap">
+    <img src="images/logobtm.png">
+    <a href=""></a>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/scrolloverflow.min.js"></script>
+<script src="js/jquery.fullpage.extensions.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/layer_mobile/layer.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage'],
+        sectionsColor: ['#eaebef', '#eaebef'],
+        slidesNavigation: true,
+        scrollOverflow: true,
+        css3:true,
+        scrollOverflowReset: true,
+        scrollOverflowResetKey: 'YWx2YXJvdHJpZ28uY29tXzlRaGMyTnliMnhzVDNabGNtWnNiM2RTWlhObGRBPT14Ykk=',
+        scrollBar:true,
+        afterLoad: function(anchorLink, index){
+            if(index == 2){
+                $(".btm-wrap").animate({opacity:1,bottom:0});
+            }
+        },
+        onLeave: function(index, newIndex, direction){
+            if (index == 2 && direction == 'up'){
+                $(".btm-wrap").animate({opacity:0,bottom:'-1.2rem'});
+            }
+        },
+        afterRender: function(){
+            wow = new WOW({
+                animateClass: 'animated',
+                offset: 0
+            });
+            wow.init();
+        }
+    });
+
+    //
+    var clipboard = new Clipboard('.btncopy');
+
+    clipboard.on('success', function(e) {
+        layer.open({
+            content: '复制成功'
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    });
+
+    clipboard.on('error', function(e) {
+        // layer.open({
+        //     content: '请手动长按复制'
+        //     ,skin: 'msg'
+        //     ,time: 2 //2秒后自动关闭
+        // });
+    });
+
+});
+</script>
+</body>
+</html>
