@@ -4,9 +4,9 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/blog/"/>
+  <link href="https://webstermobile.github.io/blog/"/>
   <updated>2017-03-19T10:22:27.611Z</updated>
-  <id>http://yoursite.com/blog/</id>
+  <id>https://webstermobile.github.io/blog/</id>
   
   <author>
     <name>webster</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>再谈多列均匀布局问题</title>
-    <link href="http://yoursite.com/blog/multi-column-uniform-layout.html"/>
-    <id>http://yoursite.com/blog/multi-column-uniform-layout.html</id>
+    <link href="https://webstermobile.github.io/blog/multi-column-uniform-layout.html"/>
+    <id>https://webstermobile.github.io/blog/multi-column-uniform-layout.html</id>
     <published>2017-03-19T08:25:00.000Z</published>
     <updated>2017-03-19T10:22:27.611Z</updated>
     
@@ -74,14 +74,14 @@
     </summary>
     
     
-      <category term="css技巧" scheme="http://yoursite.com/blog/tags/css%E6%8A%80%E5%B7%A7/"/>
+      <category term="css技巧" scheme="https://webstermobile.github.io/blog/tags/css%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
     <title>移动端高清多屏适配的解决方案</title>
-    <link href="http://yoursite.com/blog/mobile-hd-multi-screen-adaptation-solution.html"/>
-    <id>http://yoursite.com/blog/mobile-hd-multi-screen-adaptation-solution.html</id>
+    <link href="https://webstermobile.github.io/blog/mobile-hd-multi-screen-adaptation-solution.html"/>
+    <id>https://webstermobile.github.io/blog/mobile-hd-multi-screen-adaptation-solution.html</id>
     <published>2017-03-19T05:48:52.000Z</published>
     <updated>2017-03-19T07:07:01.153Z</updated>
     
@@ -294,14 +294,14 @@
     </summary>
     
     
-      <category term="H5" scheme="http://yoursite.com/blog/tags/H5/"/>
+      <category term="H5" scheme="https://webstermobile.github.io/blog/tags/H5/"/>
     
   </entry>
   
   <entry>
     <title>Woo commerce—搭建WordPress电子商务网站</title>
-    <link href="http://yoursite.com/blog/woo-commerce-introduction.html"/>
-    <id>http://yoursite.com/blog/woo-commerce-introduction.html</id>
+    <link href="https://webstermobile.github.io/blog/woo-commerce-introduction.html"/>
+    <id>https://webstermobile.github.io/blog/woo-commerce-introduction.html</id>
     <published>2017-03-18T14:02:52.000Z</published>
     <updated>2017-03-19T06:17:12.373Z</updated>
     
@@ -348,16 +348,16 @@
     </summary>
     
     
-      <category term="wordpress" scheme="http://yoursite.com/blog/tags/wordpress/"/>
+      <category term="wordpress" scheme="https://webstermobile.github.io/blog/tags/wordpress/"/>
     
-      <category term="Woo commerce" scheme="http://yoursite.com/blog/tags/Woo-commerce/"/>
+      <category term="Woo commerce" scheme="https://webstermobile.github.io/blog/tags/Woo-commerce/"/>
     
   </entry>
   
   <entry>
     <title>wordpress防刷新无插件统计文章浏览次数</title>
-    <link href="http://yoursite.com/blog/wp-views-no-plugin.html"/>
-    <id>http://yoursite.com/blog/wp-views-no-plugin.html</id>
+    <link href="https://webstermobile.github.io/blog/wp-views-no-plugin.html"/>
+    <id>https://webstermobile.github.io/blog/wp-views-no-plugin.html</id>
     <published>2017-03-17T16:55:34.000Z</published>
     <updated>2017-03-17T16:59:07.140Z</updated>
     
@@ -380,14 +380,14 @@
     </summary>
     
     
-      <category term="wordpress" scheme="http://yoursite.com/blog/tags/wordpress/"/>
+      <category term="wordpress" scheme="https://webstermobile.github.io/blog/tags/wordpress/"/>
     
   </entry>
   
   <entry>
     <title>git证书校验位置出错</title>
-    <link href="http://yoursite.com/blog/git-certificate-location-errow.html"/>
-    <id>http://yoursite.com/blog/git-certificate-location-errow.html</id>
+    <link href="https://webstermobile.github.io/blog/git-certificate-location-errow.html"/>
+    <id>https://webstermobile.github.io/blog/git-certificate-location-errow.html</id>
     <published>2017-03-16T13:55:14.000Z</published>
     <updated>2017-03-19T06:10:53.823Z</updated>
     
@@ -404,7 +404,7 @@
     </summary>
     
     
-      <category term="git" scheme="http://yoursite.com/blog/tags/git/"/>
+      <category term="git" scheme="https://webstermobile.github.io/blog/tags/git/"/>
     
   </entry>
   
