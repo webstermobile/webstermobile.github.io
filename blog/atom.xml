@@ -1,12 +1,91 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="webster,webstermobile@gmail.com"><title>移动端高清多屏适配的解决方案 · IT民工的日常</title><meta name="description" content="背景
-开发移动端H5页面
-面对不同分辨率的手机
-面对不同屏幕尺寸的手机
-
-视觉稿在前端开发之前，视觉MM会给我们一个psd文件，称之为视觉稿。
-对于移动端开发而言，为了做到页面高清的效果，视觉稿的规范往往会遵循以下两点：
-
-首先，选取一款手机的屏幕宽高作为基准(以前是iphone4的320×480，"><meta name="keywords" content="WEB前端开发,WordPress技巧"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="http://olrmgd9hk.bkt.clouddn.com/touxiang.png" type="image/x-icon"><link rel="stylesheet" href="/blog/css/style.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/blog/atom.xml"><script src="/blog/js/tongji.js"></script></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="http://olrmgd9hk.bkt.clouddn.com/touxiang.png" style="width:140px;"><h3 title=""><a href="/blog">IT民工的日常</a></h3><div class="description"><p>爱工作 爱生活.</p></div></div></div><div class="nav"><li><a href="/blog"><i class="iconfont icon-home"></i>首页</a></li><li><a href="/blog/about"><i class="iconfont icon-aboutus"></i>关于</a></li><li><a href="/blog/archives"><i class="iconfont icon-collect"></i>归档</a></li><li><a href="/blog/links"><i class="iconfont icon-links"></i>友链</a></li></div></div><div class="main"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>移动端高清多屏适配的解决方案</a></h3></div><div class="post-content"><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><ul>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>IT民工的日常</title>
+  
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/blog/"/>
+  <updated>2017-03-19T08:26:05.429Z</updated>
+  <id>http://yoursite.com/blog/</id>
+  
+  <author>
+    <name>webster</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>再谈多列均匀布局问题</title>
+    <link href="http://yoursite.com/blog/multi-column-uniform-layout.html"/>
+    <id>http://yoursite.com/blog/multi-column-uniform-layout.html</id>
+    <published>2017-03-19T08:25:00.000Z</published>
+    <updated>2017-03-19T08:26:05.429Z</updated>
+    
+    <content type="html"><![CDATA[<p>如图所示，如何实现下列这种多列均匀布局：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal.png" alt="image"></p>
+<h2 id="法一：display-flex"><a href="#法一：display-flex" class="headerlink" title="法一：display:flex"></a>法一：display:flex</h2><p>CSS3 弹性盒子(Flexible Box 或 Flexbox)，是一种布局方式，当页面需要适应不同的屏幕大小以及设备类型时，它依然能确保元素拥有更恰当的排布行为。<br>当然 flex 布局应用于移动端不错，PC 端需要全兼容的话，兼容性不够，此处略过不谈。</p>
+<h2 id="法二：借助伪元素及-text-align-justify"><a href="#法二：借助伪元素及-text-align-justify" class="headerlink" title="法二：借助伪元素及 text-align:justify"></a>法二：借助伪元素及 text-align:justify</h2><p>定义如下 HTML 样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;justify&quot;&gt;</div><div class="line">        &lt;i&gt;1&lt;/i&gt;</div><div class="line">        &lt;i&gt;2&lt;/i&gt;</div><div class="line">        &lt;i&gt;3&lt;/i&gt;</div><div class="line">        &lt;i&gt;4&lt;/i&gt;</div><div class="line">        &lt;i&gt;5&lt;/i&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>我们知道，有个 text-align:justify 可以实现两端对齐文本效果。</p>
+<blockquote>
+<p>text-align CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。text-align 并不控制块元素自己的对齐，只控制它的行内内容的对齐。</p>
+<p>text-align:justify 表示文字向两侧对齐。<br>一开始我猜测使用它可以实现，采用如下 CSS ：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.justify&#123;</div><div class="line">  text-align: justify;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.justify i&#123;</div><div class="line">  width:24px;</div><div class="line">  line-height:24px;</div><div class="line">  display:inline-block;</div><div class="line">  text-align:center;</div><div class="line">  border-radius:50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal-error.png" alt="image"></p>
+<p>没有得到意料之中的结果，并没有实现所谓的两端对齐，查找原因，在 W3C 找到这样一段解释:</p>
+<p>最后一个水平对齐属性是 justify，它会带来自己的一些问题。CSS 中没有说明如何处理连字符，因为不同的语言有不同的连字符规则。规范没有尝试去调和这样一些很可能不完备的规则，而是干脆不提这个问题。</p>
+<p>额，我看完上面一大段解释还是没明白上面意思，再继续查证，才找到原因：</p>
+<p>虽然 text-align:justify 属性是全兼容的，但是要使用它实现两端对齐，需要注意在模块之间添加<strong>[空格/换行符/制表符]</strong>才能起作用。</p>
+<p>也就是说每一个 1 间隙，至少需要有一个空格或者换行或者制表符才行。</p>
+<p>好的，我们尝试一下更新一下 HTML 结构，采用同样的 CSS：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;justify&quot;&gt;</div><div class="line">        &lt;i&gt;1&lt;/i&gt;</div><div class="line"></div><div class="line">        &lt;i&gt;2&lt;/i&gt;</div><div class="line"></div><div class="line">        &lt;i&gt;3&lt;/i&gt;</div><div class="line"></div><div class="line">        &lt;i&gt;4&lt;/i&gt;</div><div class="line"></div><div class="line">        &lt;i&gt;5&lt;/i&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>尝试给每一块中间添加一个换行符，结果如下：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal-error.png" alt="image"></p>
+<p>啊哦，还是不行啊。</p>
+<p>再寻找原因，原来是出在最后一个元素上面，然后我找到了 text-align-last 这个属性，text-align-last 属性规定如何对齐文本的最后一行，并且 text-align-last 属性只有在 text-align 属性设置为 justify 时才起作用。</p>
+<p>尝试给容器添加 text-align-last:justify：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.justify&#123;</div><div class="line">  text-align: justify;</div><div class="line">  text-align-last: justify; // 新增这一行</div><div class="line">&#125;</div><div class="line"></div><div class="line">.justify i&#123;</div><div class="line">  width:24px;</div><div class="line">  line-height:24px;</div><div class="line">  display:inline-block;</div><div class="line">  text-align:center;</div><div class="line">  border-radius:50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>发现终于可以了，实现了多列均匀布局：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal-ok.png" alt="image"></p>
+<p>结束了？没有，查看一下 text-align-last 的兼容性：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal-browser.png" alt="image"></p>
+<p>但是一看兼容性，惨不忍睹，只有 IE8+ 和 最新的 chrome 支持 text-align-last 属性，也就是说，如果你不是在使用 IE8+ 或者 最新版的 chrome 观看本文，上面 Demo 里的打开的 codePen 例子还是没有均匀分布。</p>
+<p>上面说了要使用 text-align:justify 实现多列布局，要配合 text-align-last ，但是它的兼容性又不好，真的没办法了么，其实还是有的，使用伪元素配合，不需要 text-align-last 属性。</p>
+<p>我们给 class=”justify” 的 div 添加一个伪元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">.justify&#123;</div><div class="line">  text-align: justify;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.justify i&#123;</div><div class="line">  width:24px;</div><div class="line">  line-height:24px;</div><div class="line">  display:inline-block;</div><div class="line">  text-align:center;</div><div class="line">  border-radius:50%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.justify:after &#123;</div><div class="line">  content: &quot;&quot;;</div><div class="line">  display: inline-block;</div><div class="line">  position: relative;</div><div class="line">  width: 100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>去掉了 text-align-last: justify 了，增加一个伪元素，效果如下：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal-ok.png" alt="image"></p>
+<p>通过给伪元素 :after 设置 inline-block 设置宽度 100% ，配合容器的 text-align: justify 就可以轻松实现多列均匀布局了。再多配合几句 hack 代码，可以实现兼容到 IE6+ ，最重要的是代码不长，很好理解。</p>
+<p>那么为什么使用了 :after 伪元素之后就可以实现对齐了呢？</p>
+<p>原因在于 justify 只有在存在第二行的情况下，第一行才两端对齐，所以在这里，我们需要制造一个假的第二行，而 :after 伪元素正好再适合不过。</p>
+<p>最终实现题目初始所示：</p>
+<p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal.png" alt="image"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如图所示，如何实现下列这种多列均匀布局：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://olrmgd9hk.bkt.clouddn.com/multi-column-equal.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;法一：display-flex&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="css技巧" scheme="http://yoursite.com/blog/tags/css%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端高清多屏适配的解决方案</title>
+    <link href="http://yoursite.com/blog/mobile-hd-multi-screen-adaptation-solution.html"/>
+    <id>http://yoursite.com/blog/mobile-hd-multi-screen-adaptation-solution.html</id>
+    <published>2017-03-19T05:48:52.000Z</published>
+    <updated>2017-03-19T07:07:01.153Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><ul>
 <li>开发移动端H5页面</li>
 <li>面对不同分辨率的手机</li>
 <li>面对不同屏幕尺寸的手机</li>
@@ -201,12 +280,132 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.px2px(font-size, 32);</div></pre></td></tr></table></figure>
 <p>当然对于其他css属性，如果也要求不同dpr下都保持一致的话，也可以这样操作，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.px2px(padding, 20);</div><div class="line"></div><div class="line">.px2px(right, 8);</div></pre></td></tr></table></figure>
-</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-calendar"></i><span class="date">2017-03-19</span><i class="fa fa-comment-o"></i><a href="/blog/mobile-hd-multi-screen-adaptation-solution.html#comments">评论</a><i class="fa fa-tag"></i><a href="/blog/tags/H5/" title="H5" class="tag">H5 </a></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a role="navigation" href="/blog/multi-column-uniform-layout.html" title="再谈多列均匀布局问题" class="btn">上一篇</a></li><li class="next pagbuttons"><a role="navigation" href="/blog/woo-commerce-introduction.html" title="Woo commerce—搭建WordPress电子商务网站" class="btn">下一篇</a></li></ul></div><a id="comments"></a><div data-thread-key="mobile-hd-multi-screen-adaptation-solution.html" data-title="移动端高清多屏适配的解决方案" data-url="http://yoursite.com/blog/blog/mobile-hd-multi-screen-adaptation-solution.html" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"webstermobile"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();</script></div></div></div><div class="footer"><span>© 2017 前端实战笔记 </span></div></div><script src="/blog/js/jquery.js"></script></body></html>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;开发移动端H5页面&lt;/li&gt;
+&lt;li&gt;面对不同分辨率的手机&lt;/li&gt;
+&lt;li&gt;面对不同屏幕尺寸的手机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h
+    
+    </summary>
+    
+    
+      <category term="H5" scheme="http://yoursite.com/blog/tags/H5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Woo commerce—搭建WordPress电子商务网站</title>
+    <link href="http://yoursite.com/blog/woo-commerce-introduction.html"/>
+    <id>http://yoursite.com/blog/woo-commerce-introduction.html</id>
+    <published>2017-03-18T14:02:52.000Z</published>
+    <updated>2017-03-19T06:17:12.373Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>用WordPress构建电子商务网站已经是一个流行的解决方案，与oscommerce、prestashop相比，WordPress更适合构建小型电商网站，显然WordPress对资源的消耗使其难以胜任大型电子商务网站，但博客式营销的模式以及WordPress的CMS特性也让它有胜过大型电商网站的地方——搭建更容易、费用低、管理简单，非常适合那些卖的产品不多的人。今天介绍的是一款新兴的WordPress电商插件——Woo Commerce。</p>
+</blockquote>
+<h2 id="Woo-Commerce简介"><a href="#Woo-Commerce简介" class="headerlink" title="Woo Commerce简介"></a>Woo Commerce简介</h2><p><strong>Woo Commerce是一款开源的WordPress电子商务插件</strong>，可以再woo官网免费下载，且搭配了几款免费的支持woo commerce的主题，让用户无需付费就能体验到这款插件的强大。</p>
+<p><a href="http://www.woothemes.com/woocommerce/" target="_blank" rel="external">Woo Commerce插件下载</a></p>
+<p><a href="http://wcdocs.woothemes.com/" target="_blank" rel="external">Woo Commerce文档</a></p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>灵活，内置多种hooks和filters，主题和插件开发者可以轻松扩展功能</li>
+<li>后台选项卡式设置，界面友好，清晰易懂</li>
+<li>支持多种付款方式，包括</li>
+<li><ul>
+<li>Authorize.net</li>
+</ul>
+</li>
+<li><ul>
+<li>Inspire Commerce</li>
+</ul>
+</li>
+<li><ul>
+<li>2Checkout.com</li>
+</ul>
+</li>
+<li><ul>
+<li>Google Checkout</li>
+</ul>
+</li>
+<li><ul>
+<li>PayPal Pro<br>可以用插件形式扩展更多的付款方式，有详细的文档描述</li>
+</ul>
+</li>
+<li>强大的模板系统，可以通过拷贝woocommerce模板到自己的主题目录下，轻松覆盖默认模板，定制化很方便。</li>
+<li>最后一点，文档非常详细，这是一个big bonus。说明这款插件已经很好的考虑了开发者、设计者的需求。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;用WordPress构建电子商务网站已经是一个流行的解决方案，与oscommerce、prestashop相比，WordPress更适合构建小型电商网站，显然WordPress对资源的消耗使其难以胜任大型电子商务网站，但博客式营销的模式以及Word
+    
+    </summary>
+    
+    
+      <category term="wordpress" scheme="http://yoursite.com/blog/tags/wordpress/"/>
+    
+      <category term="Woo commerce" scheme="http://yoursite.com/blog/tags/Woo-commerce/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wordpress防刷新无插件统计文章浏览次数</title>
+    <link href="http://yoursite.com/blog/wp-views-no-plugin.html"/>
+    <id>http://yoursite.com/blog/wp-views-no-plugin.html</id>
+    <published>2017-03-17T16:55:34.000Z</published>
+    <updated>2017-03-17T16:59:07.140Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>之前做的一个网站有个文章浏览次数统计的功能，以往都是用wp-postviews插件来实现（懒人，你懂得O(∩_∩)O哈哈~），后来经过多次使用，发现用这个插件有点小题大做，我只是想输出个浏览次数，该插件的其他功能我都不需要，那是不是用这个插件就显得比较赘余了呢？其实之前用到的许多插件也都只是用了他九牛之一毛的功力，插件多了就拖慢了站点打开的速度了，随着客户对站点打开的速度越来越高，还是要学会自己做功能啊，尽量做到代码洁净！于是乎有了下文：</p>
+</blockquote>
+<p>第一步，在你主题的functions.php文件中添加如下代码(是统计计数、获取浏览数的一些函数)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line">/***********文章统计*********/  </div><div class="line">    function process_postviews() &#123;   </div><div class="line">        global $user_ID, $post;   </div><div class="line">        if(check_cookie($post))   </div><div class="line">            return;   </div><div class="line">        if(is_int($post)) &#123;   </div><div class="line">            $post = get_post($post);   </div><div class="line">        &#125;   </div><div class="line">        if(!wp_is_post_revision($post)) &#123;   </div><div class="line">            if(is_single() || is_page()) &#123;   </div><div class="line">                $id = intval($post-&gt;ID);   </div><div class="line">                //$post_views = get_post_custom($id);   </div><div class="line">                $post_views = get_post_meta($id,&apos;_check_count&apos;,true);   </div><div class="line">                //统计所有人   </div><div class="line">                $should_count = true;   </div><div class="line">                //排除机器人   </div><div class="line">                $bots = array(&apos;Google Bot&apos; =&gt; &apos;googlebot&apos;, &apos;Google Bot&apos; =&gt; &apos;google&apos;, &apos;MSN&apos; =&gt; &apos;msnbot&apos;, &apos;Alex&apos; =&gt; &apos;ia_archiver&apos;, &apos;Lycos&apos; =&gt; &apos;lycos&apos;, &apos;Ask Jeeves&apos; =&gt; &apos;jeeves&apos;, &apos;Altavista&apos; =&gt; &apos;scooter&apos;, &apos;AllTheWeb&apos; =&gt; &apos;fast-webcrawler&apos;, &apos;Inktomi&apos; =&gt; &apos;slurp@inktomi&apos;, &apos;Turnitin.com&apos; =&gt; &apos;turnitinbot&apos;, &apos;Technorati&apos; =&gt; &apos;technorati&apos;, &apos;Yahoo&apos; =&gt; &apos;yahoo&apos;, &apos;Findexa&apos; =&gt; &apos;findexa&apos;, &apos;NextLinks&apos; =&gt; &apos;findlinks&apos;, &apos;Gais&apos; =&gt; &apos;gaisbo&apos;, &apos;WiseNut&apos; =&gt; &apos;zyborg&apos;, &apos;WhoisSource&apos; =&gt; &apos;surveybot&apos;, &apos;Bloglines&apos; =&gt; &apos;bloglines&apos;, &apos;BlogSearch&apos; =&gt; &apos;blogsearch&apos;, &apos;PubSub&apos; =&gt; &apos;pubsub&apos;, &apos;Syndic8&apos; =&gt; &apos;syndic8&apos;, &apos;RadioUserland&apos; =&gt; &apos;userland&apos;, &apos;Gigabot&apos; =&gt; &apos;gigabot&apos;, &apos;Become.com&apos; =&gt; &apos;become.com&apos;,&apos;Baidu Bot&apos;=&gt;&apos;Baiduspider&apos;);   </div><div class="line">                $useragent = $_SERVER[&apos;HTTP_USER_AGENT&apos;];   </div><div class="line">                foreach ($bots as $name =&gt; $lookfor) &#123;   </div><div class="line">                    if (stristr($useragent, $lookfor) !== false) &#123;   </div><div class="line">                        $should_count = false;   </div><div class="line">                        break;   </div><div class="line">                    &#125;   </div><div class="line">                &#125;   </div><div class="line">                if($should_count) &#123;   </div><div class="line">                    if(!update_post_meta($id, &apos;_check_count&apos;, ($post_views+1))) &#123;   </div><div class="line">                        add_post_meta($id, &apos;_check_count&apos;, 1, true);   </div><div class="line">                    &#125;   </div><div class="line">                &#125;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">    &#125;   </div><div class="line">      </div><div class="line">    function check_cookie($post)&#123;   </div><div class="line">        $COOKNAME = &apos;websterwp_view&apos;;   </div><div class="line">        if(isset($_COOKIE[$COOKNAME]))   </div><div class="line">            $cookie = $_COOKIE[$COOKNAME];   </div><div class="line">        else  </div><div class="line">            return false;   </div><div class="line">        $id = $post-&gt;ID;   </div><div class="line">        if(empty($id))&#123;   </div><div class="line">            return false;   </div><div class="line">        &#125;   </div><div class="line">        if(!empty($cookie))&#123;   </div><div class="line">            $list = explode(&apos;a&apos;, $cookie);   </div><div class="line">            if(!empty($list) &amp;&amp; in_array($id, $list))&#123;   </div><div class="line">                return true;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">        return false;   </div><div class="line">    &#125;   </div><div class="line">    ### Function: Display The Post Views   </div><div class="line">    function the_views($display = true,$id) &#123;   </div><div class="line">        $post_views = intval(get_post_meta($id,&apos;_check_count&apos;,true));   </div><div class="line">        $output = number_format_i18n($post_views);   </div><div class="line">        if($display) &#123;   </div><div class="line">            echo $output;   </div><div class="line">        &#125; else &#123;   </div><div class="line">            return $output;   </div><div class="line">        &#125;   </div><div class="line">    &#125;   </div><div class="line">      </div><div class="line">    ### Function: Display Total Views   </div><div class="line">    if(!function_exists(&apos;get_totalviews&apos;)) &#123;   </div><div class="line">        function get_totalviews($display = true) &#123;   </div><div class="line">            global $wpdb;   </div><div class="line">            $total_views = intval($wpdb-&gt;get_var(&quot;SELECT SUM(meta_value+0) FROM $wpdb-&gt;postmeta WHERE meta_key = &apos;_check_count&apos;&quot;));   </div><div class="line">            if($display) &#123;   </div><div class="line">                echo number_format_i18n($total_views);   </div><div class="line">            &#125; else &#123;   </div><div class="line">                return $total_views;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">    &#125;   </div><div class="line">      </div><div class="line">    ### Function: Add Views Custom Fields   </div><div class="line">    add_action(&apos;publish_post&apos;, &apos;add_views_fields&apos;);   </div><div class="line">    add_action(&apos;publish_page&apos;, &apos;add_views_fields&apos;);   </div><div class="line">    function add_views_fields($post_ID) &#123;   </div><div class="line">        global $wpdb;   </div><div class="line">        if(!wp_is_post_revision($post_ID)) &#123;   </div><div class="line">            add_post_meta($post_ID, &apos;_check_count&apos;, 0, true);   </div><div class="line">        &#125;   </div><div class="line">    &#125;   </div><div class="line">    ### Function: Delete Views Custom Fields   </div><div class="line">    add_action(&apos;delete_post&apos;, &apos;delete_views_fields&apos;);   </div><div class="line">    function delete_views_fields($post_ID) &#123;   </div><div class="line">        global $wpdb;   </div><div class="line">        if(!wp_is_post_revision($post_ID)) &#123;   </div><div class="line">            delete_post_meta($post_ID, &apos;_check_count&apos;);   </div><div class="line">        &#125;   </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>第二步：由于我们统计一般只统计文章，所以在你的主题的single.php文件的最最最最开头加上如下php代码。下面的代码是用来设置cookie的，会在用户浏览器端增加一个形如： 123a45a45a113 其中字母a是分隔文章ID的，有效期是一天，设置cookie前不能有任何输出，所以这些代码要添加在文件的最最开头。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">$COOKNAME = &apos;websterwp_view&apos;; //cookie名称   </div><div class="line">    $TIME = 3600 * 24;   </div><div class="line">    $PATH = &apos;/&apos;;   </div><div class="line">        </div><div class="line">    $id = $posts[0]-&gt;ID;   </div><div class="line">    $expire = time() + $TIME; //cookie有效期   </div><div class="line">    if(isset($_COOKIE[$COOKNAME]))   </div><div class="line">        $cookie = $_COOKIE[$COOKNAME]; //获取cookie   </div><div class="line">    else  </div><div class="line">        $cookie = &apos;&apos;;   </div><div class="line">           </div><div class="line">    if(empty($cookie))&#123;   </div><div class="line">        //如果没有cookie   </div><div class="line">        setcookie($COOKNAME, $id, $expire, $PATH);   </div><div class="line">    &#125;else&#123;   </div><div class="line">        //用a分割成数组   </div><div class="line">        $list = explode(&apos;a&apos;, $cookie);   </div><div class="line">        //如果已经存在本文的id   </div><div class="line">        if(!in_array($id, $list))&#123;   </div><div class="line">            setcookie($COOKNAME, $cookie.&apos;a&apos;.$id, $expire, $PATH);   </div><div class="line">        &#125;   </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>第三步：在single.php文件的 while( have_posts() ) : the_post();的后面增加统计浏览数的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">process_postviews();</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;之前做的一个网站有个文章浏览次数统计的功能，以往都是用wp-postviews插件来实现（懒人，你懂得O(∩_∩)O哈哈~），后来经过多次使用，发现用这个插件有点小题大做，我只是想输出个浏览次数，该插件的其他功能我都不需要，那是不是用这个插件就显得
+    
+    </summary>
+    
+    
+      <category term="wordpress" scheme="http://yoursite.com/blog/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git证书校验位置出错</title>
+    <link href="http://yoursite.com/blog/git-certificate-location-errow.html"/>
+    <id>http://yoursite.com/blog/git-certificate-location-errow.html</id>
+    <published>2017-03-16T13:55:14.000Z</published>
+    <updated>2017-03-19T06:10:53.823Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天使用<strong>GIT</strong>的时候遇到一个问题（很奇怪，之前咋没出现这个问题呢）</p>
+<h4 id="出错代码"><a href="#出错代码" class="headerlink" title="出错代码"></a>出错代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">error setting certificate verify locations:</div><div class="line">CAfile: F:/gitt/Git/mingw64/ssl/certs/ca-bundle.crt</div><div class="line">CApath: none</div></pre></td></tr></table></figure>
+<p> 看到这么多字母，小编表示一脸懵逼，还好有度娘，搜索结果第一页就顺利找到答案，下面把解决方法写下来载入史册（O(∩_∩)O哈哈~）</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --system http.sslcainfo <span class="string">"D:\git\Git\mingw64\ssl\certs\ca-bundle.crt</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天使用&lt;strong&gt;GIT&lt;/strong&gt;的时候遇到一个问题（很奇怪，之前咋没出现这个问题呢）&lt;/p&gt;
+&lt;h4 id=&quot;出错代码&quot;&gt;&lt;a href=&quot;#出错代码&quot; class=&quot;headerlink&quot; title=&quot;出错代码&quot;&gt;&lt;/a&gt;出错代码&lt;/h4&gt;&lt;figure
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yoursite.com/blog/tags/git/"/>
+    
+  </entry>
+  
+</feed>
