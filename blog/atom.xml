@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/blog/"/>
-  <updated>2017-03-19T08:26:05.429Z</updated>
+  <updated>2017-03-19T10:22:27.611Z</updated>
   <id>http://yoursite.com/blog/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://yoursite.com/blog/multi-column-uniform-layout.html"/>
     <id>http://yoursite.com/blog/multi-column-uniform-layout.html</id>
     <published>2017-03-19T08:25:00.000Z</published>
-    <updated>2017-03-19T08:26:05.429Z</updated>
+    <updated>2017-03-19T10:22:27.611Z</updated>
     
     <content type="html"><![CDATA[<p>如图所示，如何实现下列这种多列均匀布局：</p>
 <p><img src="http://olrmgd9hk.bkt.clouddn.com/multi-column-equal.png" alt="image"></p>
-<h2 id="法一：display-flex"><a href="#法一：display-flex" class="headerlink" title="法一：display:flex"></a>法一：display:flex</h2><p>CSS3 弹性盒子(Flexible Box 或 Flexbox)，是一种布局方式，当页面需要适应不同的屏幕大小以及设备类型时，它依然能确保元素拥有更恰当的排布行为。<br>当然 flex 布局应用于移动端不错，PC 端需要全兼容的话，兼容性不够，此处略过不谈。</p>
-<h2 id="法二：借助伪元素及-text-align-justify"><a href="#法二：借助伪元素及-text-align-justify" class="headerlink" title="法二：借助伪元素及 text-align:justify"></a>法二：借助伪元素及 text-align:justify</h2><p>定义如下 HTML 样式：</p>
+<h4 id="法一：display-flex"><a href="#法一：display-flex" class="headerlink" title="法一：display:flex"></a>法一：display:flex</h4><p>CSS3 弹性盒子(Flexible Box 或 Flexbox)，是一种布局方式，当页面需要适应不同的屏幕大小以及设备类型时，它依然能确保元素拥有更恰当的排布行为。<br>当然 flex 布局应用于移动端不错，PC 端需要全兼容的话，兼容性不够，此处略过不谈。</p>
+<h4 id="法二：借助伪元素及-text-align-justify"><a href="#法二：借助伪元素及-text-align-justify" class="headerlink" title="法二：借助伪元素及 text-align:justify"></a>法二：借助伪元素及 text-align:justify</h4><p>定义如下 HTML 样式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;justify&quot;&gt;</div><div class="line">        &lt;i&gt;1&lt;/i&gt;</div><div class="line">        &lt;i&gt;2&lt;/i&gt;</div><div class="line">        &lt;i&gt;3&lt;/i&gt;</div><div class="line">        &lt;i&gt;4&lt;/i&gt;</div><div class="line">        &lt;i&gt;5&lt;/i&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>我们知道，有个 text-align:justify 可以实现两端对齐文本效果。</p>
 <blockquote>
@@ -69,7 +69,7 @@
     
       &lt;p&gt;如图所示，如何实现下列这种多列均匀布局：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://olrmgd9hk.bkt.clouddn.com/multi-column-equal.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;法一：display-flex&quot;&gt;
+&lt;h4 id=&quot;法一：display-flex&quot;&gt;
     
     </summary>
     
