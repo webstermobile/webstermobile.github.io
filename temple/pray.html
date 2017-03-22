@@ -8,30 +8,45 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <script src="js/setfont.js"></script>
-<link href="css/common.b44178.css" rel="stylesheet"></head>
+<link href="css/common.css" rel="stylesheet"></head>
 <body>
 <div class="container fix-footer">
+	<div class="white-block mgb10">
+		<a href=""><img src="images/bannersaoma.png" class="center-block"></a>
+	</div>
 	<div class="white-block mgb10">
 		<div class="white-top">
 			<div class="title">心愿祈福</div>
 			<a href="" class="more">更多</a>
 		</div>
-		<div class="pray-heart-cat clearfix">
+		<div class="pray-heart-cat onlyfour clearfix">
 			<a href="">
-				<img src="images/cat_yinyuan.jpg">
+				<div class="inner">
+					<div class="title">姻缘</div>
+					<img src="images/wishpic1.jpg">
+				</div>
 			</a>
 			<a href="">
-				<img src="images/cat_xueye.jpg">
+				<div class="inner">
+					<div class="title">学业</div>
+					<img src="images/wishpic2.jpg">
+				</div>
 			</a>
 			<a href="">
-				<img src="images/cat_shiye.jpg">
+				<div class="inner">
+					<div class="title">事业</div>
+					<img src="images/wishpic3.jpg">
+				</div>
 			</a>
 			<a href="">
-				<img src="images/cat_jiating.jpg">
+				<div class="inner">
+					<div class="title">家庭</div>
+					<img src="images/wishpic4.jpg">
+				</div>
 			</a>
 		</div>
 	</div>
-	<div class="white-block">
+	<div class="white-block mgb10">
 		<div class="white-top">
 			<div class="title">活动祈福</div>
 			<a href="" class="more">更多</a>
@@ -41,7 +56,7 @@
 				<a class="act-main">
 					<img src="images/actpic1.jpg" class="center-block">
 					<div class="title ellipse">
-						二零一七年新年祈福大会
+						鸡年新春祈福大会
 					</div>
 				</a>
 				<div class="act-other">
@@ -56,7 +71,7 @@
 						</div>
 						<div class="inner">
 							<div class="act-meta-val">
-								3910
+								1013
 							</div>
 							<div class="act-meta-key">
 								累计参与者
@@ -64,7 +79,7 @@
 						</div>
 						<div class="inner">
 							<div class="act-meta-val highlight">
-								3200
+								6705
 							</div>
 							<div class="act-meta-key">
 								累计功德数
@@ -73,8 +88,12 @@
 					</div>
 					<hr>
 					<div class="act-new">
-						<span>最新动态:</span>
-						<a href="">吃土的茅山道士获得了功德<b>2192</b></a>
+						<div class="bn-title"></div>
+						<ul>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+						</ul>
 					</div>
 				</div>
 			</li>
@@ -97,7 +116,7 @@
 						</div>
 						<div class="inner">
 							<div class="act-meta-val">
-								18207
+								5600
 							</div>
 							<div class="act-meta-key">
 								累计参与者
@@ -105,7 +124,7 @@
 						</div>
 						<div class="inner">
 							<div class="act-meta-val highlight">
-								3200
+								59200
 							</div>
 							<div class="act-meta-key">
 								累计功德数
@@ -114,12 +133,18 @@
 					</div>
 					<hr>
 					<div class="act-new">
-						<span>最新动态:</span>
-						<a href="">吃土的茅山道士获得了功德<b>2192</b></a>
+						<ul>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+						</ul>
 					</div>
 				</div>
 			</li>
 		</ul>
+	</div>
+	<div class="white-block">
+		<a href=""><img src="images/bannerbaifo.png" class="center-block"></a>
 	</div>
 </div>
 <footer>
@@ -139,6 +164,13 @@
 	</nav>
 </footer>
 <script src="js/lib/jquery.min.js"></script>
+<script src="js/notice.js"></script>
 <script src="js/common.js"></script>
-<script type="text/javascript" src="js/common.b44178.js"></script><script type="text/javascript" src="js/pray.b44178.js"></script></body>
+<script>
+$(document).ready(function(){
+	//notice scroll
+	jQuery(".act-new").slide({mainCell:"ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:1});
+});
+</script>
+</body>
 </html>

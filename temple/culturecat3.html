@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文化分类3</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script src="js/setfont.js"></script>
+
+<link href="css/common.css" rel="stylesheet"></head>
+<body>
+<div class="container bgfff">
+
+
+
+<div class="catsub wfull">
+
+	<div class="tab-box">
+		<a class="arc-tongji" href="">
+			<div class="cat-title">拜佛礼仪</div>
+			<div class="arc-num">共 3 篇文章</div>
+			<div class="iconarrbig"></div>
+		</a>
+		<h3 class="catlog">目录</h3>
+		<ul class="catlist">
+			<li><a href="">拜佛动作</a></li>
+			<li><a href="">拜佛禁忌</a></li>
+			<li><a href="">专业拈(上)香的方法</a></li>
+			<li><a href="">礼拜呼吸法</a></li>
+			<li><a href="">烧香注意事项</a></li>
+			<li><a href="">礼拜步奏</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script>
+
+
+$(".catsuplist li").click(function(){
+	if(!$(this).hasClass("active")){
+		$(this).addClass('active').siblings("li").removeClass('active')
+		var index = $(this).index()
+		$(".catsub .tab-box").eq(index).show().siblings(".tab-box").hide()
+	}
+})
+
+</script>
+</body>
+</html>

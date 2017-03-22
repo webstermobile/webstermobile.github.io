@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文化分类</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script src="js/setfont.js"></script>
+
+<link href="css/common.css" rel="stylesheet"></head>
+<body>
+<div class="container bgfff">
+
+<div class="catsup">
+	<ul class="catsuplist">
+		<li class="active">
+			<a href="javascript:;">佛教历史</a>
+		</li>
+		<li>
+			<a href="javascript:;">佛教故事</a>
+		</li>
+		<li>
+			<a href="javascript:;">经文大全</a>
+		</li>
+		<li>
+			<a href="javascript:;">佛教礼仪</a>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="catsub">
+
+	<div class="tab-box">
+		<a class="arc-tongji" href="">
+			<div class="cat-title">佛教历史</div>
+			<div class="arc-num">共 3 篇文章</div>
+			<div class="iconarrbig"></div>
+		</a>
+		<h3 class="catlog">目录</h3>
+		<ul class="catlist">
+			<li><a href="">拜佛礼仪</a></li>
+			<li><a href="">礼佛礼仪</a></li>
+			<li><a href="">供佛礼仪</a></li>
+		</ul>
+	</div>
+	<div class="tab-box" style="display: none">
+		<a class="arc-tongji" href="">
+			<div class="cat-title">佛教故事</div>
+			<div class="arc-num">共 3 篇文章</div>
+			<div class="iconarrbig"></div>
+		</a>
+		<h3 class="catlog">目录</h3>
+		<ul class="catlist">
+			<li><a href="">拜佛礼仪</a></li>
+			<li><a href="">礼佛礼仪</a></li>
+			<li><a href="">供佛礼仪</a></li>
+		</ul>
+	</div>
+	<div class="tab-box" style="display: none">
+		<a class="arc-tongji" href="">
+			<div class="cat-title">经文大全</div>
+			<div class="arc-num">共 3 篇文章</div>
+			<div class="iconarrbig"></div>
+		</a>
+		<h3 class="catlog">目录</h3>
+		<ul class="catlist">
+			<li><a href="">拜佛礼仪</a></li>
+			<li><a href="">礼佛礼仪</a></li>
+			<li><a href="">供佛礼仪</a></li>
+		</ul>
+	</div>
+	<div class="tab-box" style="display: none">
+		<div class="arc-tongji">
+			<div class="cat-title">佛教礼仪</div>
+			<div class="arc-num">共 3 篇文章</div>
+			<div class="iconarrbig"></div>
+		</div>
+		<h3 class="catlog">目录</h3>
+		<ul class="catlist">
+			<li><a href="">拜佛礼仪</a></li>
+			<li><a href="">礼佛礼仪</a></li>
+			<li><a href="">供佛礼仪</a></li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script>
+
+
+$(".catsuplist li").click(function(){
+	if(!$(this).hasClass("active")){
+		$(this).addClass('active').siblings("li").removeClass('active')
+		var index = $(this).index()
+		$(".catsub .tab-box").eq(index).show().siblings(".tab-box").hide()
+	}
+})
+
+</script>
+</body>
+</html>
