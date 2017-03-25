@@ -8,7 +8,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <script src="js/setfont.js"></script>
-<link href="css/common.b44178.css" rel="stylesheet"></head>
+<link href="css/common.css" rel="stylesheet"></head>
 <body>
 <div class="container fix-footer">
 
@@ -51,8 +51,11 @@
 					</div>
 					<hr>
 					<div class="act-new">
-						<span>最新动态:</span>
-						<a href="">吃土的茅山道士获得了功德<b>2192</b></a>
+						<ul>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+						</ul>
 					</div>
 				</div>
 			</li>
@@ -92,8 +95,11 @@
 					</div>
 					<hr>
 					<div class="act-new">
-						<span>最新动态:</span>
-						<a href="">吃土的茅山道士获得了功德<b>2192</b></a>
+						<ul>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+							<li><a href="">正法雷音获得了功德<b>15</b></a></li>
+						</ul>
 					</div>
 				</div>
 			</li>
@@ -117,6 +123,13 @@
 	</nav>
 </footer>
 <script src="js/lib/jquery.min.js"></script>
+<script src="js/notice.js"></script>
 <script src="js/common.js"></script>
-<script type="text/javascript" src="js/common.b44178.js"></script><script type="text/javascript" src="js/prayactlist.b44178.js"></script></body>
+<script>
+$(document).ready(function(){
+	//notice scroll
+	jQuery(".act-new").slide({mainCell:"ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:1});
+});
+</script>
+</body>
 </html>

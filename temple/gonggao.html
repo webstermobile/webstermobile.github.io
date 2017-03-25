@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>公告列表</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script src="js/setfont.js"></script>
+<link href="css/common.css" rel="stylesheet"></head>
+<body>
+<div class="container bgf6f2eb">
+<div class="list">
+    <ul>
+        <li>
+            <a href="javascript:;">
+                <div class="gdmain">
+                    <time style="">2017年3月15日 14:20</time>
+                    <p>净心大法师4月24日将于我寺举行“四处修念住，远离分别即无所住”讲座。名额有限，有兴趣的施主请提前报名参加。</p>
+                </div>
+                <i></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <div class="gdmain">
+                    <time style="">2017年3月15日 14:20</time>
+                    <p>净心大法师4月24日将于我寺举行“四处修念住，远离分别即无所住”讲座。名额有限，有兴趣的施主请提前报名参加。</p>
+                </div>
+                <i></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <div class="gdmain">
+                    <time style="">2017年3月15日 14:20</time>
+                    <p>净心大法师4月24日将于我寺举行“四处修念住，远离分别即无所住”讲座。名额有限，有兴趣的施主请提前报名参加。</p>
+                </div>
+                <i></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <div class="gdmain">
+                    <time style="">2017年3月15日 14:20</time>
+                    <p>净心大法师4月24日将于我寺举行“四处修念住，远离分别即无所住”讲座。名额有限，有兴趣的施主请提前报名参加。</p>
+                </div>
+                <i></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <div class="gdmain">
+                    <time style="">2017年3月15日 14:20</time>
+                    <p>净心大法师4月24日将于我寺举行“四处修念住，远离分别即无所住”讲座。名额有限，有兴趣的施主请提前报名参加。</p>
+                </div>
+                <i></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+</div>
+<script>
+//侧滑显示删除按钮
+var expansion = null; //是否存在展开的list
+var container = document.querySelectorAll('.list li a');
+for(var i = 0; i < container.length; i++){ 
+ var x, y, X, Y, swipeX, swipeY;
+ container[i].addEventListener('touchstart', function(event) {
+  x = event.changedTouches[0].pageX;
+  y = event.changedTouches[0].pageY;
+  swipeX = true;
+  swipeY = true ;
+  if(expansion){ //判断是否展开，如果展开则收起
+   expansion.className = "";
+  }  
+ });
+ container[i].addEventListener('touchmove', function(event){
+  
+  X = event.changedTouches[0].pageX;
+  Y = event.changedTouches[0].pageY;  
+  // 左右滑动
+  if(swipeX && Math.abs(X - x) - Math.abs(Y - y) > 0){
+   // 阻止事件冒泡
+   event.stopPropagation();
+   if(X - x > 10){ //右滑
+    event.preventDefault();
+    this.className = ""; //右滑收起
+   }
+   if(x - X > 10){ //左滑
+    event.preventDefault();
+    this.className = "swipeleft"; //左滑展开
+    expansion = this;
+   }
+   swipeY = false;
+  }
+  // 上下滑动
+  if(swipeY && Math.abs(X - x) - Math.abs(Y - y) < 0) {
+   swipeX = false;
+  }  
+ });
+}
+</script>
+
+<script src="js/lib/jquery.min.js"></script>
+<script>
+$("li i").click(function(){
+	console.log("sdf")
+})
+</script>
+</body>
+</html>

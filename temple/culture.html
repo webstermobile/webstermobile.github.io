@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <link href="js/lib/swiper/swiper.min.css" rel="stylesheet">
 <script src="js/setfont.js"></script>
-<link href="css/common.b44178.css" rel="stylesheet"></head>
+<link href="css/common.css" rel="stylesheet"></head>
 <body>
 <div class="container fix-footer">
 
@@ -38,11 +38,12 @@
 		<div class="notice-text">公告</div>
 		<div class="bulletin">
 			<ul>
-				<li><a href="">我寺3月将举行放生大会</a></li>
-				<li><a href="">我寺3月将举行放生大会</a></li>
-				<li><a href="">我寺3月将举行放生大会</a></li>
+				<li><a href="">我寺3月将举行放生大会我寺3月将举行放生大会</a></li>
+				<li><a href="">我寺3月将举行放生大会我寺3月将举行放生大会</a></li>
+				<li><a href="">我寺3月将举行放生大会我寺3月将举行放生大会</a></li>
 			</ul>
 		</div>
+		<a href="" class="more">更多</a>
 	</div>
 	
 
@@ -123,6 +124,7 @@
 				</div>
 				<div class="detail">
 					<a class="title" href="">佛教礼仪细讲</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
 					<div class="tags">
 						佛教礼仪/课本
 					</div>
@@ -135,6 +137,7 @@
 				<div class="detail">
 					<a class="title" href="">细说藏传佛教与普通佛教印度
 佛教的区别</a>
+					<div class="brief">每个朝代礼仪不同，但相同的是文...</div>
 					<div class="tags">
 						佛教礼仪/课本
 					</div>
@@ -157,8 +160,13 @@
 				</div>
 				<div class="detail">
 					<a class="title" href="">千年寿圣寺举办法会为逝人更为生者祈福</a>
-					<div class="pubdate">
-						2017/3/12
+					<div class="meta clearfix">
+						<div class="fl">
+							<a href="">佛教新闻</a>
+						</div>
+						<div class="fr">
+							4月14日
+						</div>
 					</div>
 				</div>
 			</li>
@@ -168,8 +176,13 @@
 				</div>
 				<div class="detail">
 					<a class="title" href="">峨眉山报国寺隆重举行惟清长老追思法会</a>
-					<div class="pubdate">
-						2017/3/12
+					<div class="meta clearfix">
+						<div class="fl">
+							<a href="">佛教新闻</a>
+						</div>
+						<div class="fr">
+							4月14日
+						</div>
 					</div>
 				</div>
 			</li>
@@ -201,9 +214,9 @@
 <script>
 $(document).ready(function(){
 	//notice scroll
-	$(".bulletin").Scroll({line:1,speed:1000,timer:2000});
+	jQuery(".bulletin").slide({mainCell:"ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:1});
 
 });
 </script>
-<script type="text/javascript" src="js/common.b44178.js"></script><script type="text/javascript" src="js/culture.b44178.js"></script></body>
+</body>
 </html>

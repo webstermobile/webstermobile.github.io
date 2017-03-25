@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Webpack App</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script src="js/setfont.js"></script>
+<link href="css/common.css" rel="stylesheet"></head>
+<body>
+<div class="container bgquan" id="wrapper">
+	
+	<div class="subject-detail">
+		<div class="bg-holder touming bannersubject">
+			<img src="images/bannersubject.jpg">
+		</div>
+		<div class="inner">
+			<h1 class="title">那些你不知道的佛教礼仪</h1>
+			<h3 class="subtitle"><span>专题简介</span></h3>
+			<p>佛教礼仪，是指佛教的礼节和威仪，按照地域划分有三类：汉传佛教礼仪、南传佛教礼仪和藏传佛教礼仪。</p>
+
+			<p>历史上，中国是文明礼仪之邦，礼仪从何而来，从儒释道三教仪轨而来。这些礼仪并非文化糟粕，而是需要我们继承和发扬的。欲求佛智，先要循规蹈矩，如孔子之制礼作乐，亦无非教人规矩，与佛弁律威仪无异。</p>
+
+			<h3 class="subtitle"><span>专题文章</span></h3>
+			<div class="relative-arcs">
+				<ul class="hot-arcs">
+					<li>
+						<div class="thumb">
+							<img src="images/arcpic1.png" class="">
+						</div>
+						<div class="detail">
+							<a class="title" href="">佛教礼仪细讲</a>
+							<div class="tags">
+								佛教礼仪/课本
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="images/arcpic2.png" class="">
+						</div>
+						<div class="detail">
+							<a class="title" href="">禅学中的智慧故事</a>
+							<div class="tags">
+								佛教礼仪/课本
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="images/arcpic1.png" class="">
+						</div>
+						<div class="detail">
+							<a class="title" href="">佛教礼仪细讲</a>
+							<div class="tags">
+								佛教礼仪/课本
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="images/arcpic2.png" class="">
+						</div>
+						<div class="detail">
+							<a class="title" href="">禅学中的智慧故事</a>
+							<div class="tags">
+								佛教礼仪/课本
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul id="thelist" class="hot-arcs">
+			
+		</ul>
+				<div class="loadmore" id="pullUp">
+					<span class="pullUpLabel">上滑加载更多</span>
+					<span class="iconloadmore"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/iscroll4.js"></script>
+<script>
+var myScroll,pullUpEl, pullUpOffset,generatedCount = 0;
+
+function loaded() {
+	//动画部分
+	pullUpEl = document.getElementById('pullUp');	
+	pullUpOffset = pullUpEl.offsetHeight;
+	myScroll = new iScroll('wrapper', {
+		useTransition: true,
+		onRefresh: function () {
+			console.log("sfd")
+			if ($(".loadmore").hasClass('loading')) {
+				$(".loadmore").removeClass('loading')
+				$(".loadmore").find(".pullUpLabel").text('上拉加载更多');
+			}
+		},
+		onScrollMove: function () {
+			console.log(this.y)
+			if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+				pullUpEl.className += ' flip';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '释放刷新';
+				this.maxScrollY = this.maxScrollY;
+			} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+				this.maxScrollY = pullUpOffset;
+			}
+		},
+		onScrollEnd: function () {
+			if (pullUpEl.className.match('flip')) {
+				pullUpEl.className += ' loading';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中';				
+				pullUpAction();	// Execute custom function (ajax call?)
+			}
+		}
+	});
+	
+	loadAction();
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);//阻止冒泡
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 0); }, false);
+
+//初始状态，加载数据
+function loadAction(){
+	var el, li;
+	el = document.getElementById('thelist');
+	for (i=0; i<10; i++) {
+		li = document.createElement('li');
+		li.innerText = '初始数据--' + (++generatedCount);
+		el.appendChild(li, el.childNodes[0]);
+	}
+	myScroll.refresh();
+}
+
+
+
+//上拉加载更多数据
+function pullUpAction () {
+	setTimeout(function () {
+		var el, li;
+		el = document.getElementById('thelist');
+		for (i=0; i<10; i++) {
+			li = document.createElement('li');
+			li.innerText = '上拉加载--' + (++generatedCount);
+			el.appendChild(li, el.childNodes[0]);
+		}
+		myScroll.refresh();
+	}, 400);
+}
+</script>
+</body>
+</html>

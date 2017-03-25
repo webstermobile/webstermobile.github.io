@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我的活动</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script src="js/setfont.js"></script>
+<link href="css/common.css" rel="stylesheet"></head>
+<body>
+<div class="container bgfff">
+
+<div class="actmanage">
+	<div class="toptab clearfix">
+		<a href="javascript:;" class="doing active">进行中</a>
+		<a href="javascript:;" class="finished">已结束</a>
+	</div>
+	<ul class="actlist doing">
+		<li>
+			<a href="">
+				<div class="title">祈福活动</div>
+				<div class="datetime">2017年3月19日</div>
+			</a>
+			<div class="popcode"></div>
+		</li>
+		<li>
+			<a href="">
+				<div class="title">第101届放生法会</div>
+				<div class="datetime">2017年3月23日</div>
+			</a>
+			<div class="popcode"></div>
+		</li>
+		<li>
+			<a href="">
+				<div class="title">清明祭祀活动</div>
+				<div class="datetime">2017年3月19日</div>
+			</a>
+			<div class="popcode"></div>
+		</li>
+	</ul>
+	<ul class="actlist finished" style="display: none">
+		<li>
+			<a href="">
+				<div class="title">祈福活动</div>
+				<div class="datetime">2017年3月19日</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="title">祈福活动</div>
+				<div class="datetime">2017年3月19日</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="title">祈福活动</div>
+				<div class="datetime">2017年3月19日</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="title">第101届放生法会</div>
+				<div class="datetime">2017年3月23日</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="title">清明祭祀活动</div>
+				<div class="datetime">2017年3月19日</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+</div>
+
+<div id="code-wrap" style="display:none">
+	<div class="layer-code text-center">
+		<i class="close"></i>
+		<div class="title">活动二维码</div>
+		<div class="actcode">
+			<img src="images/code.png">
+		</div>
+		<div class="enrol-code">
+			报名码 <span>4830020</span>
+		</div>
+	</div>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/layer/mobile/layer.js"></script>
+<script>
+$(".popcode").click(function(){
+	var index = layer.open({
+		className:'lay-code',
+		anim:'scale',
+		content: $("#code-wrap").html()
+  	});
+  	$(".layer-code .close").click(function(){
+  		layer.close(index)
+  	})
+})
+
+$(".toptab .doing").click(function(){
+	if(!$(this).hasClass('active')){
+		$(this).addClass('active')
+		$(".toptab .finished").removeClass('active')
+		$("ul.finished").hide()
+		$("ul.doing").show()
+	}
+})
+$(".toptab .finished").click(function(){
+	if(!$(this).hasClass('active')){
+		$(this).addClass('active')
+		$(".toptab .doing").removeClass('active')
+		$("ul.doing").hide()
+		$("ul.finished").show()
+	}
+})
+</script>
+</body>
+</html>

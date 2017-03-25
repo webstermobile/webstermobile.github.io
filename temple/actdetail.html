@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <link href="js/lib/swiper/swiper.min.css" rel="stylesheet">
 <script src="js/setfont.js"></script>
-<link href="css/common.b44178.css" rel="stylesheet"></head>
+<link href="css/common.css" rel="stylesheet"></head>
 <body>
 <div class="container fix-footer-low">
 
@@ -54,11 +54,37 @@
 </div>
 <div class="fixop-wrap clearfix">
 	<div class="nums fl"><span class="light">234</span> <span>/ 2000</span>人</div>
+	<a href="javascript:;" class="btn-bm fr popcode">二维码</a>
 	
-	<a href="javascript:;" class="btn-bm disabled fr">已报名</a>
+</div>
+
+<div id="code-wrap" style="display:none">
+	<div class="layer-code text-center">
+		<i class="close"></i>
+		<div class="title">活动二维码</div>
+		<div class="actcode">
+			<img src="images/code.png">
+		</div>
+		<div class="enrol-code">
+			报名码 <span>4830020</span>
+		</div>
+	</div>
 </div>
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/swiper/swiper.jquery.min.js"></script>
+<script src="js/layer/mobile/layer.js"></script>
 <script src="js/common.js"></script>
-<script type="text/javascript" src="js/common.b44178.js"></script><script type="text/javascript" src="js/actdetail.b44178.js"></script></body>
+<script>
+$(".popcode").click(function(){
+	var index = layer.open({
+		className:'lay-code',
+		anim:'scale',
+		content: $("#code-wrap").html()
+  	});
+  	$(".layer-code .close").click(function(){
+  		layer.close(index)
+  	})
+})
+</script>
+</body>
 </html>

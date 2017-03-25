@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文化列表</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script src="js/setfont.js"></script>
+<link href="css/common.css" rel="stylesheet"></head>
+<body>
+
+<div class="topsou">
+	<a href="" class="iconfilter">筛选</a>
+	<div class="soubox">
+		<input type="text" placeholder="搜索" class="inputsou">
+		<div class="cancle">取消</div>
+		<i class="icondel"></i>
+	</div>
+</div>
+
+<div class="container bgfff pdt50">
+	
+	
+	
+
+	<div class="white-block">
+
+		<ul class="hot-arcs">
+			<li>
+				<div class="thumb">
+					<img src="images/arcpic1.png" class="">
+				</div>
+				<div class="detail">
+					<a class="title" href="">佛教礼仪细讲</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
+					<div class="tags">
+						佛教礼仪/课本
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="thumb">
+					<img src="images/arcpic2.png" class="">
+				</div>
+				<div class="detail">
+					<a class="title" href="">细说藏传佛教与普通佛教印度
+佛教的区别</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
+					<div class="tags">
+						佛教礼仪/课本
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="thumb">
+					<img src="images/arcpic1.png" class="">
+				</div>
+				<div class="detail">
+					<a class="title" href="">佛教礼仪细讲</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
+					<div class="tags">
+						佛教礼仪/课本
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="thumb">
+					<img src="images/arcpic2.png" class="">
+				</div>
+				<div class="detail">
+					<a class="title" href="">细说藏传佛教与普通佛教印度
+佛教的区别</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
+					<div class="tags">
+						佛教礼仪/课本
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="thumb">
+					<img src="images/arcpic1.png" class="">
+				</div>
+				<div class="detail">
+					<a class="title" href="">佛教礼仪细讲</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
+					<div class="tags">
+						佛教礼仪/课本
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="thumb">
+					<img src="images/arcpic2.png" class="">
+				</div>
+				<div class="detail">
+					<a class="title" href="">细说藏传佛教与普通佛教印度
+佛教的区别</a>
+					<div class="brief">细数佛教礼仪，行为智慧永留佛心</div>
+					<div class="tags">
+						佛教礼仪/课本
+					</div>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+
+
+</div>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(".inputsou").keyup(function(){
+	if($(this).val() != ''){
+		$(".icondel").show();
+	}else{
+		$(".icondel").hide();
+	}
+})
+$(".icondel").click(function(){
+	$(".inputsou").val('').focus()
+})
+</script>
+</body>
+</html>
