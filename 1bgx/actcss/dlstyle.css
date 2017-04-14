@@ -1,0 +1,41 @@
+body{margin:0;padding:0}
+img{max-width:100%;height:auto}
+html{font-size:100px}
+body,html{height:100%}
+body{max-width:750px;font-size:.24rem;margin:0 auto;}
+a{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+.page-wrap{position:relative;height: 100%;overflow:hidden;background:url(../img/beautygirls.jpg) no-repeat center top;background-size:100% auto;}
+.phone{position: absolute;width:43.066%;bottom:0;left:6.4%;}
+.logoact{position:absolute;width:31.733%;right:10.666%;bottom:2.22rem;}
+.dllink-wrap{position: absolute;display: block;width:2.72rem;height: 1rem;line-height:1rem;font-size:15px;right:0.58rem;bottom:0.8rem;background:#008fd7;border-radius:0.64rem;text-decoration: none;text-align: center;color:white;}
+.dllink-wrap:after{content:'';width:0.21rem;height:100%;position:absolute;right:0.32rem;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAeCAYAAADD0FVVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiZmI1OWE1OS0yNjBlLTEzNDUtOTJkMi1lZjA4MThmZGI4N2UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTVBRTFENzMwNDdBMTFFNzk2NUNDMDNGN0EyNDlDMTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTVBRTFENzIwNDdBMTFFNzk2NUNDMDNGN0EyNDlDMTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmI5NDkxOTQ2LTY3MjgtNGYwYi1hYjRjLWNhMzcxN2U1ZjkwYSIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmQxYTViYzE3LTA5ODAtMTE3YS1iMzQyLWFkODBjNDk0NzIxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Phh78YoAAADkSURBVHjarNbdCoJAEAXgoecsKpOoMDFRMRPp57XNbQdGGoaumrNwLtyLD3V3ZpdCCBTzCt8xxixl/q/oh7uB1wiU0xt4i0A5nYLfMTsEymkVPMXsESinNvABgXJKA58QKKcQcIbPCJQE0nCBQEk+fVK/o0SgJIul4RqBkmwvDbcIlJNIYcyjQ6AkJTwquEegJE1Hww+eX5BvTD9nHW+5MW85oBfq5l2oFL2l7B5t0GVaecs0Mw3l4m0ouQFzRJPWYOZt0pXp+kfvcdKgD76rAVP0ZSLxXiYG9LXnacCVpyV+BBgAi5mMyvQiwgMAAAAASUVORK5CYII=') no-repeat center;background-size:100% auto;}
+.hz{z-index: 10;}
+.cirbgwrap{width:100%;height:4.26rem;overflow:hidden;position:absolute;left:0;bottom:0;}
+.cirbg{height:6.26rem;width:12.52rem;position: absolute;left:50%;margin-left:-6.26rem;bottom:-2rem;background:white;border-radius:6.26rem / 3.13rem;-webkit-border-radius:6.26rem / 3.13rem;-moz-border-radius:6.26rem / 3.13rem;}
+#weixin-tip{display:none;position:fixed;left:0;top:0;background:rgba(0,0,0,0.8);filter:alpha(opacity=80);width:100%;height:100%;z-index:999999;}
+#weixin-tip p{text-align:center;margin-top:10%;padding:0 5%;position:relative;}
+#weixin-tip .close{color:#fff;padding:5px;font:bold 20px/24px simsun;text-shadow:0 1px 0 #ddd;position:absolute;top:0;left:5%;font-size:30px;}
+@media (max-width:640px) {
+	html{font-size:85.333px;}
+}
+@media (max-width:600px) {
+	html{font-size:85.333px;}
+}
+@media (max-width:540px) {
+	html{font-size:72px;}
+}
+@media (max-width:480px) {
+	html{font-size:64px;}
+}
+@media (max-width:414px) {
+	html{font-size:55.2px;}
+}
+@media (max-width:360px) {
+	html{font-size:48px;}
+}
+@media (max-width:375px) {
+	html{font-size:50px;}
+}
+@media (max-width:320px) {
+	html{font-size:42.6666px;}
+}

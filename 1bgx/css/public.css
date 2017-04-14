@@ -1,0 +1,373 @@
+ html,
+ body {
+ 	position: relative;
+ 	margin: 0;
+ 	padding: 0;
+ 	min-width: 1086px;
+ 	height: 100%;
+ 	font: 14px/1.428 Helvetica, Arial, "Hiragino Sans GB", Tahoma, "Microsoft Yahei", STHeiti, "华文细黑", sans-serif;
+ 	font-weight: normal !important;
+ }
+ 
+ html {
+ 	overflow: auto;
+ }
+ 
+ body {
+ 	background: url(../img/yibubg.png) round;
+ 	background-size: 100%;
+ }
+ 
+ ol,
+ ul {
+ 	margin: 0;
+ 	padding: 0;
+ 	list-style: none;
+ }
+ 
+ .svg-box,
+ .svg,
+ .svg svg {
+ 	position: absolute;
+ }
+ 
+ .svg-box,
+ .svg svg {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ }
+ 
+ .svg-box {
+ 	padding: 25% 50%;
+ }
+ 
+ .svg {
+ 	top: 125px;
+ 	width: 65%;
+ 	left: 50%;
+ 	transform: translateX(-50%);
+ 	height: auto;
+ 	min-width: 666px;
+ }
+ 
+ .svg svg {
+ 	top: 0;
+ 	width: 100%;
+ 	height: 100%;
+ }
+ 
+ .svg .area {
+ 	/*opacity: 0.6;*/
+ 	fill: rgba(0, 0, 0, .5);
+ 	stroke: rgb(23, 107, 166);
+ 	stroke-miterlimit: 1;
+ 	enable-background: new;
+ 	cursor: pointer;
+ }
+ 
+ .svg text {
+ 	color: #25f1ff;
+ 	fill: #fff;
+ }
+ 
+ .svg text:hover {
+ 	fill: #25f1ff;
+ }
+ 
+ .svg .name {
+ 	/*font-size: 9px;*/
+ 	/*font-weight: bold;*/
+ 	font-size: 26px;
+ }
+ 
+ .svg .number {
+ 	font-size: 20px;
+ }
+ 
+ .svg image {
+ 	/*width: 14px;
+ 	height: 12px;*/
+ 	width: 49px;
+ 	height: 42px;
+ }
+ 
+ .icons {
+ 	display: inline-block;
+ 	width: 50px;
+ 	height: 50px;
+ 	background: url(img/ads.png) no-repeat center;
+ }
+ 
+ .title {
+ 	padding: 70px 0 26px;
+ 	height: 50px;
+ 	color: #fff;
+ 	text-align: center;
+ 	background: url(../img/txt-title.png) no-repeat center center;
+ }
+ 
+ .left,
+ .right {
+ 	position: relative;
+ 	margin-top: 23px;
+ 	z-index: 10;
+ }
+ 
+ .left {
+ 	float: left;
+ 	margin-left: 30px;
+ }
+ 
+ .right {
+ 	float: right;
+ 	margin-right: 30px;
+ }
+ 
+ .right>.row {
+ 	float: left;
+ 	margin-left: 15px;
+ 	padding-left: 10px;
+ 	width: 234px;
+ }
+ 
+ .right>.row:first-child {
+ 	margin-left: 0;
+ }
+ 
+ .right>.panel {
+ 	float: left;
+ }
+ 
+ .left .time {
+ 	padding: 15px 0 13px;
+ 	width: 267px;
+ 	text-align: center;
+ 	border: 1px solid #00c6ff;
+ }
+ 
+ .left .time time {
+ 	display: block;
+ 	font-size: 40px;
+ 	color: #e8faff;
+ }
+ 
+ .left .time span {
+ 	color: #e8faff;
+ 	font-size: 20px;
+ }
+ 
+ .left .new-title {
+ 	margin: 35px 0 20px;
+ 	padding-left: 36px;
+ 	color: #e8faff;
+ 	font-size: 30px;
+ }
+ 
+ .left .new-list {
+ 	color: #a4f8ff;
+ 	width: 267px;
+ 	height: 565px;
+ }
+ 
+ .left .new-list>div {
+ 	margin: 5px 1px;
+ 	font-size: 20px;
+ 	white-space: nowrap;
+ }
+ 
+ .left .new-list>div:before {
+ 	content: "";
+ 	display: inline-block;
+ 	margin-right: 20px;
+ 	width: 18px;
+ 	height: 18px;
+ 	background: url(../img/ic_user.png) no-repeat center;
+ 	vertical-align: middle;
+ }
+ 
+ .left .new-list>div .tel {
+ 	display: inline-block;
+ 	margin-right: 13px;
+ 	vertical-align: middle;
+ }
+ 
+ .panel {
+ 	width: 224px;
+ }
+ 
+ .panel+ .panel {
+ 	margin-top: 40px;
+ }
+ 
+ .panel-header {
+ 	position: relative;
+ 	padding-left: 45px;
+ 	color: #fff;
+ 	height: 40px;
+ 	line-height: 40px;
+ 	border: 1px solid #00c6ff;
+ 	border-left-color: transparent;
+ 	font-size: 19px;
+ 	color: #e8faff;
+ }
+ 
+ .panel-header:before {
+ 	content: "";
+ 	position: absolute;
+ 	top: -1px;
+ 	left: -13px;
+ 	width: 48px;
+ 	height: 42px;
+ 	background-position: center center;
+ 	background-repeat: no-repeat;
+ 	background-size: 100%;
+ }
+ 
+ .panel-footer {
+ 	padding: 12px 0 12px 57px;
+ 	color: #e8faff;
+ 	font-size: 32px;
+ 	border: 1px solid #00c6ff;
+ 	border-top: none;
+ 	/*font-weight: bold;*/
+ }
+ 
+ .style1:before {
+ 	background-image: url(../img/user.png);
+ }
+ 
+ .style2:before {
+ 	background-image: url(../img/new.png);
+ }
+ 
+ .style3:before {
+ 	background-image: url(../img/use.png);
+ }
+ 
+ .style4:before {
+ 	background-image: url(../img/count.png);
+ }
+ /*new 2017-1-17*/
+ 
+ .style5:before {
+ 	background-image: url(../img/times.png);
+ }
+ 
+ .style6:before {
+ 	background-image: url(../img/user-pay.png);
+ }
+ 
+ .style7:before {
+ 	background-image: url(../img/time.png);
+ }
+ 
+ .style8:before {
+ 	background-image: url(../img/time-count.png);
+ }
+ 
+ .style9:before {
+ 	background-image: url(../img/member.png);
+ }
+ /*end*/
+ 
+ .clearfix:after {
+ 	content: "";
+ 	display: block;
+ 	clear: both;
+ 	font-size: 0;
+ }
+ /*
+ 登录
+ * */
+ 
+ .login-wraper {
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	-webkit-transform: translate(-50%, -50%);
+ 	-ms-transform: translate(-50%, -50%);
+ 	transform: translate(-50%, -50%);
+ 	width: 704px;
+ 	height: 429px;
+ 	background: url(../img/bg_login.png) no-repeat center;
+ }
+ 
+ .login-title {
+ 	position: relative;
+ 	margin: 0 auto;
+ 	width: 309px;
+ 	height: 58px;
+ 	background: url(../img/icons-title.png) no-repeat center;
+ }
+ 
+ .input-wraper {
+ 	margin: 75px auto 0;
+ 	width: 336px;
+ }
+ 
+ .input-list {
+ 	position: relative;
+ 	padding: 10px 0 10px 57px;
+ 	margin-bottom: 15px;
+ 	background: rgba(0, 0, 0, .4);
+ 	border-radius: 5px;
+ }
+ 
+ .input-list:before {
+ 	content: "";
+ 	position: absolute;
+ 	left: 0;
+ 	top: 12px;
+ 	height: 26px;
+ 	width: 56px;
+ 	border-right: 1px solid #69768e;
+ }
+ 
+ .input-list.name:before {
+ 	background: url(../img/icons-user.png) no-repeat center center;
+ }
+ 
+ .input-list.password:before {
+ 	background: url(../img/icons-pass.png) no-repeat center center;
+ }
+ 
+ .input-list input {
+ 	margin-left: 20px;
+ 	outline: none;
+ 	background: transparent;
+ 	border: none;
+ 	line-height: 1;
+ 	color: rgba(255, 255, 255, .6);
+ 	font-size: 18px;
+ 	height: 28px;
+ }
+ 
+ .input-list input::-webkit-input-placeholder {
+ 	color: rgba(255, 255, 255, .3);
+ }
+ 
+ .input-list input::-moz-placeholder {
+ 	color: rgba(255, 255, 255, .3);
+ }
+ 
+ .input-list input:-ms-input-placeholder {
+ 	color: rgba(255, 255, 255, .3);
+ }
+ 
+ .btn-login {
+ 	display: block;
+ 	margin: 65px auto 0;
+ 	width: 342px;
+ 	height: 66px;
+ 	background: url(../img/icon-login.png) no-repeat center;
+ 	border: none;
+ 	cursor: pointer;
+ }
+ 
+ .loginout {
+ 	position: fixed;
+ 	top: 20px;
+ 	right: 20px;
+ 	color: rgba(255, 255, 255, .7);
+ }

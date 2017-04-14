@@ -1,0 +1,20 @@
+html{font-size:24px;}
+.dlpage{background:#0b85b6;width: 100%;height: 100%;max-width:640px;margin:0 auto;}
+.logoscan{width:26.6%;padding:5px 0;border-radius:28px; text-align: center;margin-left:3%;background:white;display: block;}
+.logoscan img{width: 75.8%;height:auto;}
+.adword img{width: 71.56%;max-width:449px;height:auto;display: block;margin:2.9rem auto 0;}
+.cartbike{margin:2.9rem auto;}
+.cartbike img{width: 38.75%;height:auto;max-width: 248px;display: block;margin: 0 auto;}
+.scanwrap{text-align:center;background:white;border-radius: 20px;width: 93.75%;margin:0 auto;padding:2rem 1rem;}
+.scanword{font-size:1rem; line-height: 1.83rem; text-align: left;display: inline-block;color:#3c3c3c;}
+.scandl{margin-top: 1.25rem;}
+.scandl a{display:inline-block;background:#0b85b6;width: 48%;border-radius:20px;color: white;font-size: 1.36rem;padding:5px 0;}
+@media (max-width:420px) {
+	html{font-size:16px;}
+}
+@media (max-width:380px) {
+	html{font-size:14px;}
+}
+@media (max-width:320px) {
+	html{font-size:12px;}
+}

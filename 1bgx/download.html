@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>下载1步单车APP</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="http://www.1bgx.com/actcss/animate.css">
+<link rel="stylesheet" href="actcss/dlstyle.css">
+</head>
+<body>
+<div id="weixin-tip">
+    <p>
+        <img src="http://www.1bgx.com/img/live_weixin.png" alt="微信打开"/>
+        <span id="close" title="关闭" class="close">×</span>
+    </p>
+</div>
+<div class="page-wrap" id="actwrap">
+<img class="phone hz wow fadeIn" src="img/phone.png">
+<img class="logoact hz fadeIn" src="img/logoact.png">
+<a href="" class="dllink-wrap hz wow pulse" id="J_weixin" data-wow-iteration="infinite">下载应用</a>
+<div class="cirbgwrap"><div class="cirbg"></div></div>
+</div>
+<script src="http://www.1bgx.com/js/wow.min.js"></script>
+<script>
+function setfont(){
+  var deviceWidth = document.documentElement.clientWidth;
+  var wraper = document.getElementById("actwrap")
+  if(deviceWidth >= 750){
+    wraper.style.height = 1206 + 'px'
+  }else{
+    wraper.style.height = '100%'
+  }
+}
+setfont()
+window.onresize=function(){setfont()}
+new WOW().init();
+var u = navigator.userAgent;
+var is_weixin = (function(){return u.toLowerCase().indexOf('micromessenger') !== -1})();
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
+window.onload = function() {
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
+    var btn = document.getElementById('J_weixin');
+    var tip = document.getElementById('weixin-tip');
+    var close = document.getElementById('close');
+    if (is_weixin) {
+        btn.onclick = function(e) {
+            tip.style.height = winHeight + 'px';
+            tip.style.display = 'block';
+            return false;
+        }
+        close.onclick = function() {
+            tip.style.display = 'none';
+        }
+    }else{
+        if(isAndroid){
+            btn.href="http://yibudanche.oss-cn-qingdao.aliyuncs.com/dl/DANCHE-Release-3.1.0.apk";
+        }else if(isiOS){
+            btn.href="https://itunes.apple.com/cn/app/1bu-dan-che/id1170763597?ls=1&mt=8"
+        }else{
+            btn.href="http://yibudanche.oss-cn-qingdao.aliyuncs.com/dl/DANCHE-Release-3.1.0.apk"
+        }
+    }
+}
+</script>
+</body>
+</html>
