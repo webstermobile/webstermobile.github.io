@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<title>vblog</title>
-<link rel='stylesheet' type='text/css' href='css/animate.css'/>
+<title>single</title>
 <link rel='stylesheet' type='text/css' href='css/style.css'/>
 </head>
 <body>
@@ -42,102 +41,19 @@
 		</a>
 	</div>
 
-	<div class="grid">
-		<div class="gutter-sizer"></div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-thumb">
-					<img src="img/pic1.png" width="802" height="1004">
-				</a>
-				<a class="arc-title" href="">
-					Life with VIPKID:A One Year Retrospective
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
+	<div class="single-wrap">
+		<h1 class="arc-title">Life with VIPKID: A One Year Retrospective</h1>
+		<div class="arc-metas text-center">
+			<span>Sophia</span>
+			<span>Mar 19, 2017</span>
 		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-thumb">
-					<img src="img/pic2.png">
-				</a>
-				<a class="arc-title" href="">
-					9 Things that Happen Once You Become an Online English Teacher for Children
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
+		<div class="arc-detail">
+			<p><img src="img/single.png"></p>
+			<p>VIPKID provides an international learning experience to Chinese children - all from the comfort of their homes Our sophisticated virtual classroom streams passionate, qualified teachers into Chinese homes, linking the world through education.</p>
+			<p>We believe that there is a better, more effective way to teach a foreign language: through curiosity, critical thinking, and creativity.
+			<p>We provide 1-on-1 online full immersion language and content classes based on the US Common Core State Standards.</p>
 		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-thumb">
-					<img src="img/pic3.png">
-				</a>
-				<a class="arc-title" href="">
-					9 Things that Happen Once You Become an Online English Teacher for Children
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-title" href="">
-					Why VIPKID lessons need to be Gengaing and fun!
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-title" href="">
-					Why VIPKID lessons need to be Gengaing and fun!
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-thumb">
-					<img src="img/pic4.png">
-				</a>
-				<a class="arc-title" href="">
-					9 Things that Happen Once You Become an Online English Teacher for Children
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-thumb">
-					<img src="img/pic5.png">
-				</a>
-				<a class="arc-title" href="">
-					9 Things that Happen Once You Become an Online English Teacher for Children
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-thumb">
-					<img src="img/pic6.png">
-				</a>
-				<a class="arc-title" href="">
-					Life with VIPKID:A One Year Retrospective
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		<div class="grid-item wow fadeIn">
-			<div class="arc-wrap">
-				<a class="arc-title" href="">
-					Why VIPKID lessons need to be Gengaing and fun!
-				</a>
-				<div class="arc-pubdate">Mar 19,2017</div>
-			</div>
-		</div>
-		
 	</div>
-
-	<div id="loadmore">load more</div>
 
 </div>
 
@@ -172,22 +88,19 @@
 		</div>
 	</form>
 </div>
+
+<footer>
+	<div class="copyright">VBLOG &copy; 2017</div>
+</footer>
 <script src="js/lib/jquery.min.js"></script>
-<script src="js/lib/imagesloaded.min.js"></script>
 <script src="js/lib/masonry.min.js"></script>
-<script src="js/lib/wow.min.js"></script>
 <script>
 $(function(){
-	new WOW().init();
-	var $grid = $('.grid').masonry({
+	$('.grid').masonry({
 	  itemSelector: '.grid-item',
 	  columnWidth: '.grid-item',
 	  gutter:'.gutter-sizer',
 	  percentPosition: true
-	});
-	$grid.imagesLoaded().progress( function(instance,image) {
-		$(image.img).css('opacity',1)
-	  $grid.masonry('layout');
 	});
 	$("#loadmore").click(function(){
 		$('.grid').masonry({
