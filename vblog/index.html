@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <title>vblog</title>
+<link rel='stylesheet' type='text/css' href='css/animate.css'/>
 <link rel='stylesheet' type='text/css' href='css/style.css'/>
 </head>
 <body>
@@ -43,10 +44,10 @@
 
 	<div class="grid">
 		<div class="gutter-sizer"></div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-thumb">
-					<img src="img/pic1.png">
+					<img src="img/pic1.png" width="401" height="502">
 				</a>
 				<a class="arc-title" href="">
 					Life with VIPKID:A One Year Retrospective
@@ -54,10 +55,10 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-thumb">
-					<img src="img/pic2.png">
+					<img src="img/pic2.png" width="401" height="303">
 				</a>
 				<a class="arc-title" href="">
 					9 Things that Happen Once You Become an Online English Teacher for Children
@@ -65,10 +66,10 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-thumb">
-					<img src="img/pic3.png">
+					<img src="img/pic3.png" width="401" height="299">
 				</a>
 				<a class="arc-title" href="">
 					9 Things that Happen Once You Become an Online English Teacher for Children
@@ -76,7 +77,7 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-title" href="">
 					Why VIPKID lessons need to be Gengaing and fun!
@@ -84,7 +85,7 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-title" href="">
 					Why VIPKID lessons need to be Gengaing and fun!
@@ -92,10 +93,10 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-thumb">
-					<img src="img/pic4.png">
+					<img src="img/pic4.png" width="401" height="195">
 				</a>
 				<a class="arc-title" href="">
 					9 Things that Happen Once You Become an Online English Teacher for Children
@@ -103,10 +104,10 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-thumb">
-					<img src="img/pic5.png">
+					<img src="img/pic5.png" width="401" height="301">
 				</a>
 				<a class="arc-title" href="">
 					9 Things that Happen Once You Become an Online English Teacher for Children
@@ -114,10 +115,10 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-thumb">
-					<img src="img/pic6.png">
+					<img src="img/pic6.png" width="401" height="298">
 				</a>
 				<a class="arc-title" href="">
 					Life with VIPKID:A One Year Retrospective
@@ -125,7 +126,7 @@
 				<div class="arc-pubdate">Mar 19,2017</div>
 			</div>
 		</div>
-		<div class="grid-item">
+		<div class="grid-item wow fadeIn">
 			<div class="arc-wrap">
 				<a class="arc-title" href="">
 					Why VIPKID lessons need to be Gengaing and fun!
@@ -174,15 +175,18 @@
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/imagesloaded.min.js"></script>
 <script src="js/lib/masonry.min.js"></script>
+<script src="js/lib/wow.min.js"></script>
 <script>
 $(function(){
+	new WOW().init();
 	var $grid = $('.grid').masonry({
 	  itemSelector: '.grid-item',
 	  columnWidth: '.grid-item',
 	  gutter:'.gutter-sizer',
 	  percentPosition: true
 	});
-	$grid.imagesLoaded().progress( function() {
+	$grid.imagesLoaded().progress( function(instance,image) {
+		$(image.img).css('opacity',1)
 	  $grid.masonry('layout');
 	});
 	$("#loadmore").click(function(){
