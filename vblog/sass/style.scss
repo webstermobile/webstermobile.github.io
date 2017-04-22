@@ -180,6 +180,9 @@ img.center-block {
 		text-align: center;
 		& > .arc-thumb{
 			display: block;
+			img{
+				opacity: 0;
+			}
 		}
 		& > .arc-title{
 			font-size:24px;

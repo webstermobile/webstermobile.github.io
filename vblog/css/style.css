@@ -202,6 +202,9 @@ img.center-block {
 .grid-item .arc-wrap > .arc-thumb {
   display: block;
 }
+.grid-item .arc-wrap > .arc-thumb img {
+  opacity: 0;
+}
 .grid-item .arc-wrap > .arc-title {
   font-size: 24px;
   color: #333;
