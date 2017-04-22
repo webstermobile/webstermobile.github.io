@@ -172,14 +172,18 @@
 	</form>
 </div>
 <script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/imagesloaded.min.js"></script>
 <script src="js/lib/masonry.min.js"></script>
 <script>
 $(function(){
-	$('.grid').masonry({
+	var $grid = $('.grid').masonry({
 	  itemSelector: '.grid-item',
 	  columnWidth: '.grid-item',
 	  gutter:'.gutter-sizer',
 	  percentPosition: true
+	});
+	$grid.imagesLoaded().progress( function() {
+	  $grid.masonry('layout');
 	});
 	$("#loadmore").click(function(){
 		$('.grid').masonry({
