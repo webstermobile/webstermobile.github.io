@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+  <title>Taro</title>
+</head>
+<body>
+    <button id="testId">test</button>
+    <script>
+      var ele = document.getElementById('testId')
+      ele.addEventListener('click', () => {
+        // console.log('click')
+        if (window.postMessage) {
+          window.postMessage('testData')
+        }
+      })
+    </script>
+</body>
+</html>
