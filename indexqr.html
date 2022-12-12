@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>svgjs</title>
+  <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
+</head>
+
+<body>
+  <div style="width: 500px" id="reader"></div>
+  <script>
+    window.onload = () => {
+      function onScanSuccess(decodedText, decodedResult) {
+          // Handle on success condition with the decoded text or result.
+          alert(`Scan result: ${decodedText}`, decodedResult);
+          html5QrcodeScanner.clear();
+      }
+
+      function onScanError(errorMessage) {
+          // handle on error condition, with error message
+          alert(errorMessage)
+      }
+
+      var html5QrcodeScanner = new Html5QrcodeScanner(
+        "reader", { fps: 10, qrbox: 250 });
+      html5QrcodeScanner.render(onScanSuccess, onScanError);
+    }
+    
+  </script>
+</body>
+
+</html>
