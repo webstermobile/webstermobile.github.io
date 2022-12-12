@@ -6,29 +6,52 @@
   <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>scanQrcode</title>
+  <title>code</title>
   <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
 </head>
 
 <body>
-  <div style="width: 500px;height:600px;" id="reader"></div>
+  <div id="qr-reader" style="width:500px"></div>
+    <div id="qr-reader-results"></div>
   <script>
-    window.onload = () => {
-      function onScanSuccess(decodedText, decodedResult) {
-          // Handle on success condition with the decoded text or result.
-          alert(`Scan result: ${decodedText}`, decodedResult);
-          html5QrcodeScanner.clear();
-      }
-
-      function onScanError(errorMessage) {
-          // handle on error condition, with error message
-          alert(errorMessage)
-      }
-
-      var html5QrcodeScanner = new Html5QrcodeScanner(
-        "reader", { fps: 10, qrbox: 250 });
-      html5QrcodeScanner.render(onScanSuccess, onScanError);
+    function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
     }
+} 
+
+docReady(function() {
+    var resultContainer = document.getElementById('qr-reader-results');
+    var lastResult, countResults = 0;
+    
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+        "qr-reader", { fps: 10, qrbox: 250 });
+    
+    function onScanSuccess(decodedText, decodedResult) {
+        if (decodedText !== lastResult) {
+            ++countResults;
+            lastResult = decodedText;
+            console.log(`Scan result = ${decodedText}`, decodedResult);
+ 
+            resultContainer.innerHTML += `<div>[${countResults}] - ${decodedText}</div>`;
+            
+            // Optional: To close the QR code scannign after the result is found
+            html5QrcodeScanner.clear();
+        }
+    }
+    
+    // Optional callback for error, can be ignored.
+    function onScanError(qrCodeError) {
+        // This callback would be called in case of qr code scan error or setup error.
+        // You can avoid this callback completely, as it can be very verbose in nature.
+    }
+    
+    html5QrcodeScanner.render(onScanSuccess, onScanError);
+});
     
   </script>
 </body>
