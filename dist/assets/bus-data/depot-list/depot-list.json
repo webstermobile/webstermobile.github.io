@@ -1,0 +1,67 @@
+{
+    "depotList": [
+        {
+            "depot": "Kranji",
+            "chargers": 322,
+            "connectors": 652,
+            "connectorsAVL": 428,
+            "connectorsUse": 215,
+            "connectorsDown": 9,
+            "lotsAVL": 253,
+            "lotsOccupied": 77,
+            "capacity": 5000,
+            "capacityUse": 1800,
+            "grid": 2000,
+            "energyStorage": 3000
+        },
+        {
+            "depot": "Seletar",
+            "chargers": 412,
+            "connectors": 786,
+            "connectorsAVL": 630,
+            "connectorsUse": 139,
+            "connectorsDown": 7,
+            "lotsAVL": 320,
+            "lotsOccupied": 100,
+            "capacity": 6200,
+            "capacityUse": 1250,
+            "grid": 2500,
+            "energyStorage": 3700
+        },
+        {
+            "depot": "Loyang",
+            "chargers": 238,
+            "connectors": 512,
+            "connectorsAVL": 236,
+            "connectorsUse": 268,
+            "connectorsDown": 8,
+            "lotsAVL": 128,
+            "lotsOccupied": 110,
+            "capacity": 4100,
+            "capacityUse": 2000,
+            "grid": 2000,
+            "energyStorage": 2100
+        }
+    ],
+    "detail": {
+        "transaction": {
+            "totalLot": 305,
+            "reservedLot": 59.84,
+            "totalTransaction": 30518,
+            "totalRevenue": 91859.84,
+            "currency": "SGD"
+        },
+        "lotStatus": {
+            "lotNo": 324234,
+            "vehicleNo": "SKB1000A",
+            "model": "BYD K9 2019",
+            "chargerId": "201124164612GBSK",
+            "soc": 20,
+            "realTimeSoc": 50,
+            "realTimeTemp": 40.4,
+            "totalConsumedPower": 898.78,
+            "totalEnergyDelivered": 1000,
+            "totalSuccessTransaction": 30000
+        }
+    }
+}

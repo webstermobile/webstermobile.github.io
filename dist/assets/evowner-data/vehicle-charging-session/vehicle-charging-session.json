@@ -1,0 +1,244 @@
+{
+    "list": [
+        {
+            "name": "Charger 1",
+            "timeArr": [
+                {
+                    "start": "04:04",
+                    "end": "06:24",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "09:32",
+                    "end": "14:57",
+                    "status": "Driving",
+                    "value": "Reserve 174"
+                },
+                {
+                    "start": "20:51",
+                    "end": "23:44",
+                    "status": "Charging",
+                    "value": "Charging"
+                }
+            ],
+            "mode": "Optimized"
+        },
+        {
+            "name": "Charger 2",
+            "timeArr": [
+                {
+                    "start": "01:21",
+                    "end": "07:09",
+                    "status": "Alert",
+                    "value": "Charging"
+                },
+                {
+                    "start": "12:37",
+                    "end": "18:40",
+                    "status": "Driving",
+                    "value": "Reserve 175"
+                },
+                {
+                    "start": "19:22",
+                    "end": "21:1",
+                    "status": "Idle",
+                    "value": "Heating"
+                }
+            ],
+            "mode": "Optimized"
+        },
+        {
+            "name": "Charger 3",
+            "timeArr": [
+                {
+                    "start": "00:10",
+                    "end": "01:28",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "04:10",
+                    "end": "10:51",
+                    "status": "Driving",
+                    "value": "Reserve 176"
+                },
+                {
+                    "start": "12:43",
+                    "end": "17:59",
+                    "status": "Charging",
+                    "value": "Charging"
+                }
+            ],
+            "mode": "Fast"
+        },
+        {
+            "name": "Charger 4",
+            "timeArr": [
+                {
+                    "start": "00:22",
+                    "end": "06:23",
+                    "status": "Driving",
+                    "value": "Reserve 177"
+                },
+                {
+                    "start": "08:31",
+                    "end": "09:19",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "18:19",
+                    "end": "22:34",
+                    "status": "Charging",
+                    "value": "Charging"
+                }
+            ],
+            "mode": "Optimized"
+        },
+        {
+            "name": "Charger 5",
+            "timeArr": [
+                {
+                    "start": "04:15",
+                    "end": "05:17",
+                    "status": "Charging",
+                    "value": "Charging"
+                },
+                {
+                    "start": "05:20",
+                    "end": "07:40",
+                    "status": "Driving",
+                    "value": "Reserve 178"
+                },
+                {
+                    "start": "09:35",
+                    "end": "12:09",
+                    "status": "Idle",
+                    "value": "Heating"
+                }
+            ],
+            "mode": "Optimized"
+        },
+        {
+            "name": "Charger 6",
+            "timeArr": [
+                {
+                    "start": "02:49",
+                    "end": "03:53",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "04:33",
+                    "end": "06:57",
+                    "status": "Driving",
+                    "value": "Reserve 179"
+                },
+                {
+                    "start": "11:08",
+                    "end": "16:58",
+                    "status": "Charging",
+                    "value": "Charging"
+                }
+            ],
+            "mode": "Fast"
+        },
+        {
+            "name": "Charger 7",
+            "timeArr": [
+                {
+                    "start": "00:54",
+                    "end": "02:04",
+                    "status": "Driving",
+                    "value": "Reserve 180"
+                },
+                {
+                    "start": "07:29",
+                    "end": "14:37",
+                    "status": "Charging",
+                    "value": "Charging"
+                },
+                {
+                    "start": "20:09",
+                    "end": "23:31",
+                    "status": "Idle",
+                    "value": "Heating"
+                }
+            ],
+            "mode": "Optimized"
+        },
+        {
+            "name": "Charger 8",
+            "timeArr": [
+                {
+                    "start": "00:04",
+                    "end": "00:56",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "01:53",
+                    "end": "03:15",
+                    "status": "Charging",
+                    "value": "Charging"
+                },
+                {
+                    "start": "04:18",
+                    "end": "17:24",
+                    "status": "Driving",
+                    "value": "Reserve 181"
+                }
+            ],
+            "mode": "Fast"
+        },
+        {
+            "name": "Charger 9",
+            "timeArr": [
+                {
+                    "start": "03:13",
+                    "end": "04:22",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "04:42",
+                    "end": "08:38",
+                    "status": "Alert",
+                    "value": "Charging"
+                },
+                {
+                    "start": "09:16",
+                    "end": "13:39",
+                    "status": "Driving",
+                    "value": "Reserve 182"
+                }
+            ],
+            "mode": "Optimized"
+        },
+        {
+            "name": "Charger 10",
+            "timeArr": [
+                {
+                    "start": "00:27",
+                    "end": "10:05",
+                    "status": "Driving",
+                    "value": "Reserve 183"
+                },
+                {
+                    "start": "12:47",
+                    "end": "15:19",
+                    "status": "Idle",
+                    "value": "Heating"
+                },
+                {
+                    "start": "16:40",
+                    "end": "22:14",
+                    "status": "Charging",
+                    "value": "Charging"
+                }
+            ],
+            "mode": "Optimized"
+        }
+    ]
+}

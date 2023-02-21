@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="chongdianzhuang" unicode="&#58891;" d="M979.217067 442.6752h-54.408534V660.2752h54.3744V823.466667h108.817067v-163.191467h54.408533v-217.6h-54.408533v-380.791467a163.191467 163.191467 0 1 0-326.417067 0v217.6h-108.782933v-272.042666h54.408533v-108.782934H0V7.509333h54.408533V823.466667c0 30.037333 24.337067 54.408533 54.3744 54.408533h489.608534c30.037333 0 54.408533-24.3712 54.408533-54.408533v-435.2h108.817067a108.817067 108.817067 0 0 0 108.782933-108.817067v-217.6a54.408533 54.408533 0 0 1 108.817067 0V442.709333z m-598.4256 0V660.2752L163.191467 333.824h163.2256v-217.6l217.565866 326.417067h-163.157333z"  horiz-adv-x="1160" />
+
+    
+
+
+  </font>
+</defs></svg>

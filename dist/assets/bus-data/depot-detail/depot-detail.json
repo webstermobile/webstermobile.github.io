@@ -1,0 +1,19 @@
+{
+    "lotsData": {
+        "total": 532,
+        "available": 221,
+        "occupied": 311
+    },
+    "chargers": {
+        "chargers": 265,
+        "available": 225,
+        "charging": 52, 
+        "idle": 24
+    },
+    "capacity": {
+        "capacity": 5000,
+        "grid": 2000,
+        "ess": 3000,
+        "inUse": 5000
+    }
+}

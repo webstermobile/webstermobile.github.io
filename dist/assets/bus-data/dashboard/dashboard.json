@@ -1,0 +1,44 @@
+{
+    "statisticsData": {
+        "totalTransactions": 30518,
+        "totalRevenue": 341260,
+        "currency": "SGD",
+        "energyUsed": {
+            "value": 1680,
+            "rate": 5.4
+        },
+        "hourlyRevenue": 12129.84,
+        "seasonRevenue": 79730,
+        "chargers": {
+            "total": 342,
+            "up": 1,
+            "down": 1
+        },
+        "connectors": {
+            "total": 652,
+            "available": 260,
+            "use": 390,
+            "down": 2
+        },
+        "chargeSession": {
+            "consumed": 250,
+            "duration": 103,
+            "soc": 32
+        },
+        "uniqueVehicles": 1680,
+        "activeUsers": 1680,
+        "newUsers": 6,
+        "averageAnalysis": {
+            "energyConsumedPerCharge": 1680,
+            "costPerSession": 250
+        },
+        "averagePeek": {
+            "arrivalTime": "19:50",
+            "departureTime": "12:50"
+        },
+        "idleTime": 103,
+        "averageDownTime": 32,
+        "averageSericeabilityRatio": 99,
+        "chargingTime": 303
+    }
+}

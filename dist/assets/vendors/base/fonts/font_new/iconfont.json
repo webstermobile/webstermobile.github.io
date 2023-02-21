@@ -1,0 +1,16 @@
+{
+  "id": "2607807",
+  "name": "carpark",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15056486",
+      "name": "闪电",
+      "font_class": "shandian",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
